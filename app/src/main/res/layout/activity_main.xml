@@ -55,7 +55,7 @@
                         android:id="@+id/buttonSeven"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="7"
+                        android:text="@string/button_seven"
                         android:theme="@style/buttonsNumbers"/>
                 </FrameLayout>
 
@@ -68,7 +68,7 @@
                         android:id="@+id/buttonFour"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="4"
+                        android:text="@string/button_four"
                         android:theme="@style/buttonsNumbers" />
                 </FrameLayout>
 
@@ -81,7 +81,7 @@
                         android:id="@+id/buttonOne"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="1"
+                        android:text="@string/button_one"
                         android:theme="@style/buttonsNumbers" />
                 </FrameLayout>
 
@@ -94,7 +94,7 @@
                         android:id="@+id/buttonDot"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="."
+                        android:text="@string/button_dot"
                         android:theme="@style/buttonsNumbers" />
                 </FrameLayout>
 
@@ -115,7 +115,7 @@
                         android:id="@+id/buttonEight"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="8"
+                        android:text="@string/button_eight"
                         android:theme="@style/buttonsNumbers"/>
                 </FrameLayout>
 
@@ -128,7 +128,7 @@
                         android:id="@+id/buttonFive"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="5"
+                        android:text="@string/button_five"
                         android:theme="@style/buttonsNumbers" />
                 </FrameLayout>
 
@@ -141,7 +141,7 @@
                         android:id="@+id/buttonTwo"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="2"
+                        android:text="@string/button_two"
                         android:theme="@style/buttonsNumbers" />
                 </FrameLayout>
 
@@ -154,7 +154,7 @@
                         android:id="@+id/buttonZero"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="0"
+                        android:text="@string/button_zero"
                         android:theme="@style/buttonsNumbers" />
                 </FrameLayout>
 
@@ -175,7 +175,7 @@
                         android:id="@+id/buttonNine"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="9"
+                        android:text="@string/button_nine"
                         android:theme="@style/buttonsNumbers"/>
                 </FrameLayout>
 
@@ -188,7 +188,7 @@
                         android:id="@+id/buttonSix"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="6"
+                        android:text="@string/button_six"
                         android:theme="@style/buttonsNumbers" />
                 </FrameLayout>
 
@@ -201,7 +201,7 @@
                         android:id="@+id/buttonThree"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="3"
+                        android:text="@string/button_three"
                         android:theme="@style/buttonsNumbers" />
                 </FrameLayout>
 
@@ -214,7 +214,7 @@
                         android:id="@+id/buttonEqual"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="="
+                        android:text="@string/button_equal"
                         android:theme="@style/buttonsNumbers" />
                 </FrameLayout>
 
@@ -235,7 +235,7 @@
                         android:id="@+id/buttonDel"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="DEL"
+                        android:text="@string/button_del"
                         android:theme="@style/buttonsOperators"/>
                 </FrameLayout>
 
@@ -248,7 +248,7 @@
                         android:id="@+id/buttonOpen"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="("
+                        android:text="@string/button_open"
                         android:theme="@style/buttonsOperators"/>
                 </FrameLayout>
 
@@ -261,7 +261,7 @@
                         android:id="@+id/buttonClose"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text=")"
+                        android:text="@string/button_close"
                         android:theme="@style/buttonsOperators"/>
                 </FrameLayout>
 
@@ -274,7 +274,7 @@
                         android:id="@+id/buttonAdd"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="+"
+                        android:text="@string/button_add"
                         android:theme="@style/buttonsNumbers" />
                 </FrameLayout>
 
@@ -287,7 +287,7 @@
                         android:id="@+id/buttonSub"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="-"
+                        android:text="@string/button_sub"
                         android:theme="@style/buttonsNumbers" />
                 </FrameLayout>
 
@@ -300,7 +300,7 @@
                         android:id="@+id/buttonMult"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="*"
+                        android:text="@string/button_mult"
                         android:theme="@style/buttonsNumbers" />
                 </FrameLayout>
 
@@ -313,7 +313,7 @@
                         android:id="@+id/buttonDiv"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="/"
+                        android:text="@string/button_div"
                         android:theme="@style/buttonsNumbers" />
                 </FrameLayout>
 
