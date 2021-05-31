@@ -16,7 +16,7 @@ class MainViewModel {
     }
 
     fun totalResult(): String {
-        val model: MainModel = MainModel()
+        val model = MainModel()
         return model.getMathResult(expression)
     }
 }

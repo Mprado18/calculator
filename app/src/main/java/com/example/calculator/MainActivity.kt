@@ -70,5 +70,9 @@ class MainActivity : AppCompatActivity() {
         binding.buttonEqual.setOnClickListener {
             binding.textResult.text = viewModel.totalResult()
         }
+
+        //mod
+        binding.buttonMod.setOnClickListener {
+            binding.textExpression.text = viewModel.receiveValue("%") }
     }
 }
