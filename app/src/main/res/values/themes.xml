@@ -14,18 +14,4 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="buttonsNumbers">
-        <item name="android:textSize">35sp</item>
-        <item name="android:backgroundTint">@android:color/transparent</item>
-    </style>
-
-    <style name="buttonsOperators">
-        <item name="android:textSize">25sp</item>
-        <item name="android:backgroundTint">@android:color/transparent</item>
-    </style>
-
-    <style name="resultStyle">
-        <item name="android:textSize">35sp</item>
-        <item name="android:padding">15dp</item>
-    </style>
 </resources>
