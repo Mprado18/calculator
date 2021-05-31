@@ -19,4 +19,5 @@
     <string name="button_open">(</string>
     <string name="button_close">)</string>
     <string name="button_del">DEL</string>
+    <string name="button_mod">%</string>
 </resources>
