@@ -2,13 +2,16 @@ package com.example.calculator
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import com.example.calculator.databinding.ActivityMainBinding
 import com.example.calculator.viewModel.MainViewModel
 
 class MainActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityMainBinding
-    private val viewModel: MainViewModel = MainViewModel()
+    private var viewModel: MainViewModel = MainViewModel()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,41 +21,55 @@ class MainActivity : AppCompatActivity() {
 
         supportActionBar!!.hide()
 
-        // numbers
+//        Log.i("MainActivity", "Called ViewModel")
+        viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
+
+        //observer expression
+        viewModel.expression.observe(this, Observer { newExpression ->
+            binding.textExpression.text = newExpression
+        })
+
+        //numbers
         binding.buttonZero.setOnClickListener {
-            binding.textExpression.text = viewModel.receiveValue("0") }
+            viewModel._expression.setValue(viewModel.receiveValue("0")) }
         binding.buttonOne.setOnClickListener {
-            binding.textExpression.text = viewModel.receiveValue("1") }
+            viewModel._expression.setValue(viewModel.receiveValue("1")) }
         binding.buttonTwo.setOnClickListener {
-            binding.textExpression.text = viewModel.receiveValue("2") }
+            viewModel._expression.setValue(viewModel.receiveValue("2")) }
         binding.buttonThree.setOnClickListener {
-            binding.textExpression.text = viewModel.receiveValue("3") }
+            viewModel._expression.setValue(viewModel.receiveValue("3")) }
         binding.buttonFour.setOnClickListener {
-            binding.textExpression.text = viewModel.receiveValue("4") }
+            viewModel._expression.setValue(viewModel.receiveValue("4")) }
         binding.buttonFive.setOnClickListener {
-            binding.textExpression.text = viewModel.receiveValue("5") }
+            viewModel._expression.setValue(viewModel.receiveValue("5")) }
         binding.buttonSix.setOnClickListener {
-            binding.textExpression.text = viewModel.receiveValue("6") }
+            viewModel._expression.setValue(viewModel.receiveValue("6")) }
         binding.buttonSeven.setOnClickListener {
-            binding.textExpression.text = viewModel.receiveValue("7") }
+            viewModel._expression.setValue(viewModel.receiveValue("7")) }
         binding.buttonEight.setOnClickListener {
-            binding.textExpression.text = viewModel.receiveValue("8") }
+            viewModel._expression.setValue(viewModel.receiveValue("8")) }
         binding.buttonNine.setOnClickListener {
-            binding.textExpression.text = viewModel.receiveValue("9") }
+            viewModel._expression.setValue(viewModel.receiveValue("9")) }
 
-        // operators
+        //operators
         binding.buttonAdd.setOnClickListener {
-            binding.textExpression.text = viewModel.receiveValue("+") }
+            viewModel._expression.setValue(viewModel.receiveValue("+")) }
         binding.buttonSub.setOnClickListener {
-            binding.textExpression.text = viewModel.receiveValue("-") }
-        binding.buttonMult.setOnClickListener {
-            binding.textExpression.text = viewModel.receiveValue("*") }
+            viewModel._expression.setValue(viewModel.receiveValue("-")) }
         binding.buttonDiv.setOnClickListener {
-            binding.textExpression.text = viewModel.receiveValue("/") }
+            viewModel._expression.setValue(viewModel.receiveValue("/")) }
+        binding.buttonMult.setOnClickListener {
+            viewModel._expression.setValue(viewModel.receiveValue("*")) }
+        binding.buttonMod.setOnClickListener {
+            viewModel._expression.setValue(viewModel.receiveValue("%")) }
 
-        // dot
+        //dot, open and close
         binding.buttonDot.setOnClickListener {
-            binding.textExpression.text = viewModel.receiveValue(".") }
+            viewModel._expression.setValue(viewModel.receiveValue(".")) }
+        binding.buttonOpen.setOnClickListener {
+            viewModel._expression.setValue(viewModel.receiveValue("(")) }
+        binding.buttonClose.setOnClickListener {
+            viewModel._expression.setValue(viewModel.receiveValue(")")) }
 
         // del
         binding.buttonDel.setOnClickListener {
@@ -60,19 +77,8 @@ class MainActivity : AppCompatActivity() {
             binding.textResult.text = ""
         }
 
-        // open and close
-        binding.buttonOpen.setOnClickListener {
-            binding.textExpression.text = viewModel.receiveValue("(") }
-        binding.buttonClose.setOnClickListener {
-            binding.textExpression.text = viewModel.receiveValue(")") }
-
         // equal
         binding.buttonEqual.setOnClickListener {
-            binding.textResult.text = viewModel.totalResult()
-        }
-
-        //mod
-        binding.buttonMod.setOnClickListener {
-            binding.textExpression.text = viewModel.receiveValue("%") }
+            binding.textResult.text = viewModel.totalResult() }
     }
 }
