@@ -1,43 +1,36 @@
 package com.example.calculator.viewModel
 
-import android.util.Log
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.calculator.model.MainModel
 
 class MainViewModel: ViewModel() {
 
-    val _expression = MutableLiveData<String>()
-    val expression: LiveData<String> = _expression
+    val expression = MutableLiveData<String>()
 
-    val _totalExpression = MutableLiveData<String>()
+    val totalExpression = MutableLiveData<String>()
 
     init {
-        _expression.value = ""
-        _totalExpression.value = ""
-//        Log.i("MainViewModel", "ViewModel created")
+        expression.value = ""
+        totalExpression.value = ""
     }
 
-    fun receiveValue(value: String): String {
-        _expression.value += value
-        return _expression.value.toString()
+    fun receiveValue(value: String) {
+        expression.value += value
     }
 
-    fun clear(): String {
-        _expression.value = ""
-        return _expression.value.toString()
+    fun clear() {
+        expression.value = ""
+        totalExpression.value = ""
     }
 
-    fun totalResult(): String {
+    fun totalResult() {
         val model = MainModel()
-        _totalExpression.value = model.getMathResult(_expression.value!!)
-        return _totalExpression.value.toString()
+        totalExpression.value = model.getMathResult(expression.value!!)
     }
 
     override fun onCleared() {
         super.onCleared()
-//        Log.i("MainViewModel", "ViewModel destroyed")
     }
 }
 
