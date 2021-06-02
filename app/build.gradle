@@ -46,6 +46,7 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     implementation 'io.kaen.dagger:KParser-jvm:0.1.1'
+    implementation "androidx.activity:activity-ktx:1.2.3"
 
     // Lifecycles
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
