@@ -14,8 +14,8 @@
     <string name="button_dot">.</string>
     <string name="button_add">+</string>
     <string name="button_sub">-</string>
-    <string name="button_mult">*</string>
-    <string name="button_div">/</string>
+    <string name="button_mult">x</string>
+    <string name="button_div">÷</string>
     <string name="button_open">(</string>
     <string name="button_close">)</string>
     <string name="button_del">DEL</string>
